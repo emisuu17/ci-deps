@@ -1,0 +1,19 @@
+name: Segredos
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar a variável
+        env:
+          AMBIENTE: ${{ vars.AMBIENTE }}
+        run: echo "Ambiente = $AMBIENTE"
+      - name: Tentar mostrar o segredo
+        env:
+          SEGREDO: ${{ secrets.MEU_SEGREDO }}
+        run: |
+          echo "O segredo é $SEGREDO"
+          echo "Tamanho do segredo: ${#SEGREDO} caracteres"
