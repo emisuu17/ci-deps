@@ -4,7 +4,12 @@
   "description": "",
   "main": "soma.js",
   "scripts": {
-    "test":"node --test"
+    "test": "node --test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:fix": "eslint . --fix",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/emisuu17/ci-deps/issues"
   },
-  "homepage": "https://github.com/emisuu17/ci-deps#readme"
+  "homepage": "https://github.com/emisuu17/ci-deps#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "prettier": "3.10.1"
+  }
 }
